@@ -161,6 +161,12 @@ variable "use_fips_ssl" {
   default     = "false"
 }
 
+variable "wlm_configuration" {
+  description = "Configuration bits for WLM json. see https://docs.aws.amazon.com/redshift/latest/mgmt/workload-mgmt-config.html"
+  type        = list(map(any))
+  default     = []
+}
+
 variable "wlm_json_configuration" {
   description = "Configuration bits for WLM json. see https://docs.aws.amazon.com/redshift/latest/mgmt/workload-mgmt-config.html"
   type        = string
